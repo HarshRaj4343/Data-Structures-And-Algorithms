@@ -1,0 +1,66 @@
+Q1: Age distribution: most passengers between 20-40, slight right tail, few missing ages.
+
+Q2: Survival counts: {0: 549, 1: 342} (0: Not survived, 1: Survived)
+
+Q3: Survival by sex (counts):
+{0: {'female': 81, 'male': 468}, 1: {'female': 233, 'male': 109}}
+
+Q4: Pclass counts: {1: 216, 2: 184, 3: 491}
+
+Q5: Fare is heavily right-skewed; boxplot shows many outliers at high fares.
+
+Q6: Age vs Fare scatter: weak relationship; high fares concentrated across ages (first-class passengers).
+
+Q7: Survival by embarked: counts per port:
+{0: {'C': 75, 'Q': 47, 'S': 427}, 1: {'C': 93, 'Q': 30, 'S': 217}}
+
+Q8: Family size: small families and singles are common; survival rate varies by size (see saved CSV).
+
+Q9: Age distribution by survival: survivors slightly younger median than non-survivors.
+
+Q10: Age by sex: distributions similar but male group shows slightly higher spread.
+
+Q11: Males: survivors tend to be slightly younger; Females: higher survival across age ranges.
+
+Q12: Children had generally better survival rates compared to adults (see plots).
+
+Q13: Overlaid age hist: survivors show a peak at younger ages compared to non-survivors.
+
+Q14: Embarked distribution differs across classes; see grouped bar chart.
+
+Q15: 2x2 hist: female survivors display younger age peak; male non-survivors skew older.
+
+Q16: Fare by (Pclass, Survived): Pclass1 has much higher fare medians and survivors dominate higher fare.
+
+Q17: Age by sex with survival: female survivors younger on average; male survivors younger than male non-survivors.
+
+Q18: Numeric correlations with Survived: {'age': np.float64(-0.07722109457217766), 'fare': np.float64(0.25730652238496243), 'sibsp': np.float64(-0.03532249888573558), 'parch': np.float64(0.08162940708348349)} (absolute values plotted)
+
+Q19: Stacked bars show higher survival proportion in Pclass=1 relative to Pclass=3.
+
+Q20: Fare overlaid hist: survivors have heavier right-tail (higher fares) distribution compared to non-survivors.
+
+Q21: Log-scaled fare histogram makes high-fare outliers more visible as compressed bins; reveals bulk distribution.
+
+Q22: Fare by Embarked: some ports show higher median fares and skew; outliers present.
+
+Q23: Missing counts: {'survived': 0, 'pclass': 0, 'sex': 0, 'age': 177, 'sibsp': 0, 'parch': 0, 'fare': 0, 'embarked': 2, 'class': 0, 'who': 0, 'adult_male': 0, 'deck': 688, 'embark_town': 2, 'alive': 0, 'alone': 0, 'family_size': 0, 'age_group': 0} -- age and embarked have missing values that need imputation for modeling.
+
+Q24: Age histogram roughly symmetric/slightly right; Fare histogram strongly right-skewed; boxplot shows many high-fare outliers.
+
+Q25: Cumulative age curves: one curve may reach high percentage earlier showing younger survivors proportion.
+
+Q26: Survival rate by age group: {'0-12': 0.5797101449275363, '13-17': 0.4772727272727273, '18-35': 0.3802083333333333, '36-55': 0.4011299435028249, '56+': 0.3}
+
+Q27: Survivors sex proportions: {'female': 233, 'male': 109}
+
+Q28: Embarked within sex: charts saved; S (Southampton) often dominates.
+
+Q29: Mean fare by Pclass and Sex: means:
+{'female': {1: 106.12579787234043, 2: 21.97012105263158, 3: 16.118809722222224}, 'male': {1: 67.22612704918032, 2: 19.74178240740741, 3: 12.661632564841499}}
+stds:
+{'female': {1: 74.25998808168238, 2: 10.8917957359879, 3: 11.690314179542325}, 'male': {1: 77.54802089795665, 2: 14.922234745624374, 3: 11.681695521236328}}
+
+Q30: Survival rates by family size (0-5):
+{0: 0.30353817504655495, 1: 0.5527950310559007, 2: 0.5784313725490197, 3: 0.7241379310344828, 4: 0.2, 5: 0.13636363636363635}
+

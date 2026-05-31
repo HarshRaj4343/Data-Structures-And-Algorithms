@@ -1,0 +1,26 @@
+name: Topic request
+description: Suggest a new DSA topic, problem set, or repository improvement.
+title: "[Topic]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: Requested topic
+      placeholder: Sliding window
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why should it be added?
+      description: Explain the value of the new topic or improvement.
+      placeholder: This would help complete the core array problem set.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Optional references
+      description: Add links, problem names, or notes if helpful.

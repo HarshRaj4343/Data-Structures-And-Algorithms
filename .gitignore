@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Editor settings
+.vscode/
+
+# Build outputs
+build/
+*.out
+*.o
+*.obj
+*.exe
+*.dSYM/
+cmake-build-*/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated reports
+projects/titanic-eda/titanic_lab_report.pdf
