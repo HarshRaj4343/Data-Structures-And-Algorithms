@@ -50,12 +50,6 @@ g++ -std=c++17 -Wall -Wextra src/cpp/arrays/arrays4.cpp -o build/local/arrays4
 ./build/local/arrays4
 ```
 
-Run the Titanic EDA project:
-
-```bash
-python3 projects/titanic-eda/generate_report.py
-```
-
 ## Notes
 
 - `build/` is for local macOS binaries and debug symbols only.

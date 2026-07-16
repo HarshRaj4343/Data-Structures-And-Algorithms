@@ -1,4 +1,0 @@
-feature,value
-survived_counts,"{0: 549, 1: 342}"
-pclass_counts,"{1: 216, 2: 184, 3: 491}"
-missing_counts,"{'survived': 0, 'pclass': 0, 'sex': 0, 'age': 177, 'sibsp': 0, 'parch': 0, 'fare': 0, 'embarked': 2, 'class': 0, 'who': 0, 'adult_male': 0, 'deck': 688, 'embark_town': 2, 'alive': 0, 'alone': 0, 'family_size': 0, 'age_group': 0}"
