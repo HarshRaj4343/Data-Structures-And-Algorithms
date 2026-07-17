@@ -12,8 +12,6 @@
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
 // int main() {
@@ -28,8 +26,6 @@
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
 // int main() {
@@ -43,8 +39,6 @@
 //     }
 //     return 0;
 // }
-
-
 
 // #include <iostream>
 // using namespace std;
@@ -60,8 +54,6 @@
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
 // int main() {
@@ -75,8 +67,6 @@
 //     }
 //     return 0;
 // }
-
-
 
 // #include <iostream>
 // using namespace std;
@@ -92,32 +82,33 @@
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
-// int main() {
+// int main()
+// {
 //     int N;
-//     cin>>N;
-//     for (int i=1; i<=N; i++){
-//         //space1
-//         for (int j=1; j<=N-i; j++){
-//             cout<<" ";
+//     cin >> N;
+//     for (int i = 1; i <= N; i++)
+//     {
+//         // space1
+//         for (int j = 1; j <= N - i; j++)
+//         {
+//             cout << " ";
 //         }
-//         //star
-//         for (int j=1; j<=2*i-1; j++){
-//             cout<<"*";
+//         // star
+//         for (int j = 1; j <= 2 * i - 1; j++)
+//         {
+//             cout << "*";
 //         }
-//         //space2
-//         for (int j=1; j<=N-i; j++){
-//             cout<<" ";
+//         // space2
+//         for (int j = 1; j <= N - i; j++)
+//         {
+//             cout << " ";
 //         }
-//         cout<<endl;
+//         cout << endl;
 //     }
 //     return 0;
 // }
-
-
 
 // #include <iostream>
 // using namespace std;
@@ -141,8 +132,6 @@
 //     }
 //     return 0;
 // }
-
-
 
 // #include <iostream>
 // using namespace std;
@@ -182,8 +171,6 @@
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
 // int main() {
@@ -203,14 +190,10 @@
 //             cout<<endl;
 //         }
 
-
-
 //     }
 //     else;
 //     return 0;
 // }
-
-
 
 // #include <iostream>
 // using namespace std;
@@ -230,9 +213,6 @@
 //     }
 //     return 0;
 // }
-
-
-
 
 // #include <iostream>
 // using namespace std;
@@ -258,15 +238,13 @@
 //     return 0;
 // }
 
-
-
 // a new approach
 // #include <iostream>
 // using namespace std;
 // int main() {
 //     int N;
 //     cin>>N;
-//     int num=1; 
+//     int num=1;
 //     for (int i=1; i<=N; i++){
 //         for (int j=1; j<=i; j++){
 //             cout<<num<<" ";
@@ -277,8 +255,6 @@
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
 // int main() {
@@ -286,9 +262,6 @@
 //     cout<<(int)ch;  // this is how typecasting is done in cpp
 //     return 0;
 // }
-
-
-
 
 // #include <iostream>
 // using namespace std;
@@ -305,9 +278,6 @@
 //     }
 //     return 0;
 // }
-
-
-
 
 // #include <iostream>
 // using namespace std;
@@ -325,9 +295,6 @@
 //     return 0;
 // }
 
-
-
-
 // #include <iostream>
 // using namespace std;
 // int main() {
@@ -343,67 +310,70 @@
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
-// int main() {
+// int main()
+// {
 //     int N;
-//     cin>>N;
+//     cin >> N;
 //     char ch = '@';
-//     for (int i=N; i>=1; i--){
-//         for (int j=1; j<=i; j++){
-//             cout<<static_cast<char>(ch+j)<<" "; // to convert from ascii numbers to chars
+//     for (int i = N; i >= 1; i--)
+//     {
+//         for (int j = 1; j <= i; j++)
+//         {
+//             cout << static_cast<char>(ch + j) << " "; // to convert from ascii numbers to chars
 //         }
-//         cout<<endl;
+//         cout << endl;
 //     }
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
-// int main() {
+// int main()
+// {
 //     int N;
-//     cin>>N;
-//     for (int i=1; i<=N; i++){
-//         for (int j=1; j<=N-i; j++){
-//             cout<<" ";
+//     cin >> N;
+//     for (int i = 1; i <= N; i++)
+//     {
+//         for (int j = 1; j <= N - i; j++)
+//         {
+//             cout << " ";
 //         }
-//         char ch='A';
-//         for (int j=1; j<=i; j++){
-//             cout<<ch;
+//         char ch = 'A';
+//         for (int j = 1; j <= i; j++)
+//         {
+//             cout << ch;
 //             ch++;
 //         }
-//         ch-=2; // remember to do this step....one of the most crucial step it is.
-//         for (int j=1; j<i; j++){
-//             cout<<ch;
+//         ch -= 2; // remember to do this step....one of the most crucial step it is.
+//         for (int j = 1; j < i; j++)
+//         {
+//             cout << ch;
 //             ch--;
 //         }
-//         cout<<endl;
+//         cout << endl;
 //     }
 //     return 0;
 // }
-
-
 
 // a good problem
 // #include <iostream>
 // using namespace std;
-// int main() {
+// int main()
+// {
 //     int N;
-//     cin>>N;
-//     for (int i=1; i<=N; i++){
-//         for (char ch =('A')+N-i ; ch<='A'+(N-1); ch++){
-//             cout<<ch<<" ";
+//     cin >> N;
+//     for (int i = 1; i <= N; i++)
+//     {
+//         for (char ch = ('A') + N - i; ch <= 'A' + (N - 1); ch++)
+//         {
+//             cout << ch << " ";
 //         }
-//         cout<<endl;
+//         cout << endl;
 //     }
 //     return 0;
 // }
-
-
 
 // //  A VERY IMPORTANT ONE
 // #include <iostream>
@@ -449,8 +419,6 @@
 
 //     return 0;
 // }
-
-
 
 // #include <iostream>
 // using namespace std;
@@ -498,9 +466,6 @@
 //     return 0;
 // }
 
-
-
-
 // #include <iostream>
 // using namespace std;
 // int main() {
@@ -516,17 +481,18 @@
 //     return 0;
 // }
 
-
-
 // #include <iostream>
 // using namespace std;
 
-// int main() {
+// int main()
+// {
 //     int N;
 //     cin >> N;
-//     int size = 2 * N - 1; 
-//     for (int i = 1; i <= size; i++) {
-//         for (int j = 1; j <= size; j++) {
+//     int size = 2 * N - 1;
+//     for (int i = 1; i <= size; i++)
+//     {
+//         for (int j = 1; j <= size; j++)
+//         {
 //             int top = i - 1;
 //             int left = j - 1;
 //             int right = size - j;
