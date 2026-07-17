@@ -13,6 +13,13 @@ build/
 *.dSYM/
 cmake-build-*/
 
+# Compiled binaries (extensionless executables next to .cpp sources)
+src/cpp/patterns/pattern_solutions/*
+!src/cpp/patterns/pattern_solutions/*.cpp
+src/cpp/patterns/pattern_full_solns/*
+!src/cpp/patterns/pattern_full_solns/*.cpp
+src/cpp/patterns/patterns_revision_2
+
 # Python
 __pycache__/
 *.pyc
