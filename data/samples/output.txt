@@ -1,1 +1,1 @@
-It is undoubtedly an Armstrong number.
+10
