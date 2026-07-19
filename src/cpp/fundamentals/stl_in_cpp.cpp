@@ -177,6 +177,8 @@ void accessVector() {
 }
 
 // ---------- 2b. LIST (doubly-linked list) ----------
+
+// 'insert' in vector is costlier, hence we use List -> Doubly Linked List
 void explainList() {
     list<int> l1;
 
@@ -244,6 +246,7 @@ void explainStack() {
     // "? :" is the ternary operator: condition ? value_if_true : value_if_false
     // all stack operations are O(1)
 }
+// everything is O(1)
 
 // ---------- 3b. QUEUE (FIFO) ----------
 void explainQueue() {
@@ -368,6 +371,8 @@ void explainMap() {
     m1[1] = "One";
     m1[2] = "Two";
     m1[3] = "Three";
+    m1.insert({5,"Five"});
+
 
     cout << "Map elements: " << endl;
     for (auto it : m1) cout << it.first << " -> " << it.second << endl;
