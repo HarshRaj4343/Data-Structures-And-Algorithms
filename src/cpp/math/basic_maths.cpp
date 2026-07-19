@@ -121,11 +121,34 @@
 // (A number whose digits, each raised to the power, sums back to the number itself.)
 
 #include <iostream>
+#include <cmath>
 using namespace std;
-
+int noofdigit(int a){
+    int count = 0;
+    while (a>0){
+        a/=10;
+        count++;
+    }
+    return count;
+}
 int main() {
     int n;
     cin >> n;
-    
+    int duplicate = n;
+    // finding the number of digits of that particular number
+    int power = noofdigit(n);
+    // sequentially sum all the digits raised to the power
+    int total = 0;
+    while(n>0){
+        int lastdigit = n%10;
+        n/=10;
+        total = total + pow(lastdigit,power);
+    }
+    if (total == duplicate){
+        cout << "It is undoubtedly an Armstrong number.";
+    }
+    else{
+        cout << "It is not an Armstrong number.";
+    }
     return 0;
 }
