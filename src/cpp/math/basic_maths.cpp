@@ -89,5 +89,43 @@
 //     return 0;
 // }
 
-
 // PALINDROME CHECK
+
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int n, reversed = 0;
+//     cin >> n;
+//     int duplicate = n;
+//     while (n > 0)
+//     {
+//         int last = n % 10;
+//         n /= 10;
+//         reversed = reversed * 10 + last;
+//     }
+//     if (reversed == duplicate)
+//     {
+//         cout << "The given number is a palindrome!";
+//     }
+//     else
+//     {
+//         cout << "Unfortunately, this is not a palindrome!";
+//     }
+//     return 0;
+// }
+
+// ARMSTRONG NUMBER CHECK
+
+// (A number whose digits, each raised to the power, sums back to the number itself.)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    
+    return 0;
+}
