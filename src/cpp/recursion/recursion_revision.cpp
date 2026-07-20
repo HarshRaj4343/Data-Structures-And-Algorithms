@@ -211,14 +211,25 @@
 //////////////////////
 
 // #include <iostream>
-// #include <vector>
 // using namespace std;
+
+// void rever(int arr[],int l,int r){
+//     if (l>=r) return;
+//     swap(arr[l],arr[r]);
+//     rever(arr,l+1,r-1);
+// }
 
 // int main() {
 //     int n;
 //     cin >> n;
-//     vector <int> arr[n];
-
+//     int arr[n];
+//     for (int i = 0; i <= n; i++) {
+//         cin >> arr[i];
+//     }
+//     rever(arr,0,n-1);
+//     for (int i = 0; i < n; i++){
+//         cout << arr[i] << " ";
+//     }
 //     return 0;
 // }
 
@@ -226,19 +237,19 @@
 // Checking a string for palindrome
 ///////////////////
 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// bool palindromecheck(string k){
-//     if
-// }
+bool palindromecheck(string k){
+    if
+}
 
-// int main() {
-//     string s;
-//     cin >> s;
-
-//     return 0;
-// }
+int main() {
+    string s;
+    cin >> s;
+    
+    return 0;
+}
 
 ////////////////////
 // Fibonacci Number Printing
