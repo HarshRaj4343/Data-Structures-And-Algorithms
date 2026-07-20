@@ -233,23 +233,98 @@
 //     return 0;
 // }
 
+
+// Using 1 pointer
+
+// #include <iostream>
+// using namespace std;
+
+// void rever(int arr[],int i,int n){
+//     if (i>=n/2) return;
+//     swap(arr[i],arr[n-i-1]);
+//     rever(arr,i+1,n);
+// }
+
+// bool palindromecheck(int arr[],int n){
+//     rever(arr,0,n);
+//     // Add logic to check if the array is a palindrome
+//     for (int i = 0; i < n / 2; i++) {
+//         if (arr[i] != arr[n - i - 1]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// int main() {
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++) {
+//         cin >> arr[i];
+//     }
+//     if (palindromecheck(arr, n)) {
+//         cout << "The array is a palindrome." << endl;
+//     } else {
+//         cout << "The array is not a palindrome." << endl;
+//     }
+//     return 0;
+// }
+
+
+
 ////////////////////
 // Checking a string for palindrome
 ///////////////////
 
-#include <iostream>
-using namespace std;
+// Using 2 pointer method
 
-bool palindromecheck(string k){
-    if
-}
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    string s;
-    cin >> s;
-    
-    return 0;
-}
+// string rever(string s, int l, int r){
+//     if (l >= r) return s;
+//     swap(s[l], s[r]);
+//     return rever(s, l+1, r-1);
+// }
+
+// // without using &, s is passed as a copy -> pass by value
+
+// bool palindromecheck(string s){
+//     return rever(s, 0, s.size() - 1) == s;
+// }
+
+// int main() {
+//     string s;
+//     cin >> s;
+//     cout << palindromecheck(s);
+//     return 0;
+// }
+
+// Using 1 pointer
+
+// #include <iostream>
+// using namespace std;
+
+// string rever(string s, int i){
+//     if (i>=(s.size())/2) return s;
+//     swap(s[i],s[(s.size()-i-1)]);
+//     return rever(s, i+1);
+// }
+
+// bool palindromecheck(string s){
+//     return rever(s,0)==s;
+// }
+
+// int main() {
+//     string s;
+//     cin >> s;
+//     cout << palindromecheck(s);
+//     return 0;
+// }
+
+
+
 
 ////////////////////
 // Fibonacci Number Printing
