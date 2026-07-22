@@ -25,8 +25,8 @@ void Merge(vector<int> &arr,int low,int mid, int high){
         temp.emplace_back(arr[right_pointer]);
         right_pointer++;
     }
-    for (int i = 0; i < temp.size(); i++) {
-        
+    for (int i = low; i <= high; i++) {
+        arr[i] = temp[i-low];
     }
 }
 
