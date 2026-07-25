@@ -3,7 +3,7 @@
 // Brute Force
 
 // //One thing to note is that if we have to find second largest element, we cannot sort the array and pick the second last element as it may lead to wrong answer in case of duplicate largest elements.Hence, we have to traverse the array only once to find both largest and second largest elements.
-
+ 
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -64,6 +64,7 @@
 
 // #include <iostream>
 // #include <vector>
+// #include <climits>
 // using namespace std;
 
 // int second_largest(vector<int> &arr, int n)
@@ -74,7 +75,7 @@
 //         if (arr[i] > largest)
 //             largest = arr[i];
 //     }
-//     int second_lar = -1;
+//     int second_lar = INT_MIN;
 //     for (int i = 0; i < n; i++)
 //     {
 //         if (arr[i] > second_lar && arr[i] != largest)
@@ -89,21 +90,23 @@
 // {
 //     int n;
 //     cin >> n;
-    // vector<int> v;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     int x;
-    //     cin >> x;
-    //     v.emplace_back(x);
-    // }
-    // cout << second_largest(v, n);
+//     vector<int> v;
+//     for (int i = 0; i < n; i++)
+//     {
+//         int x;
+//         cin >> x;
+//         v.emplace_back(x);
+//     }
+//     cout << second_largest(v, n);
 //     return 0;
 // }
 
+// O(2N) time complexity
 
 
 
-// Best Approach
+
+// Best Approach -> Assume no negative numbers, if not, we can use INT_MIN as second largest and largest
 
 #include <iostream>
 #include <climits>
@@ -135,6 +138,7 @@ int main() {
         else if (arr[i] < largest && arr[i] > second_largest) {
             second_largest = arr[i];
         }
+        // nothing to do if arr[i] is equal to largest 
     }
 
     if (second_largest == INT_MIN) {
@@ -146,3 +150,6 @@ int main() {
 
     return 0;
 }
+
+
+// O(N) time complexity
