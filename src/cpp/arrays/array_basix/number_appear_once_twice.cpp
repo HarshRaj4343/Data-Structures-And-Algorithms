@@ -82,6 +82,37 @@ int main()
 // TC = O(3n)
 // Downside : We need to use map data structure if the numbers were greater than 1e7
 
+// ================= APPROACH 1: Hash Array / Vector =================
+// 1. Find max element in arr[] -> tells us how big the hash array must be
+// 2. Create hash array of size (max+1), initialized to 0
+// 3. Pass 1: hash[arr[i]]++  -> count occurrence of every value
+// 4. Pass 2: check hash[arr[i]] == 1 -> that value is the answer
+
+// Time  : O(3n) ~ O(n)          (max-find + marking + checking = 3 passes)
+// Space : O(max element)        NOT O(n) — depends on the largest value, not array size
+
+// Limitation:
+// - fails on negative numbers   (can't use as array index)
+// - fails on huge numbers       (10^8, 10^12...) -> array too big to allocate
+
+
+// ================= APPROACH 2: Hash Map =================
+// 1. Pass 1: mp[arr[i]]++       -> map auto-inits missing key to 0, so this just works
+// 2. Pass 2: loop map entries, return key whose value == 1
+
+// Works on negatives/huge numbers too, since map hashes by KEY not by INDEX
+
+// map<int,int>          -> ordered (tree)   -> O(log m) per op -> O(n log m) total, guaranteed
+// unordered_map<int,int>-> hash table       -> O(1) avg per op -> O(n) avg, O(n^2) worst (rare)
+// m = distinct keys stored ≈ n/2 + 1   (most numbers appear twice, so map is ~half the array size)
+
+// Space : O(m) ≈ O(n/2 + 1)     only unique keys are stored, not all n elements
+
+// Ordered map (map): TC = O(n log m + n/2) -> reliable, guaranteed worst case
+// Unordered map:      TC = O(n) avg, O(n^2) worst case (rare, due to collisions)
+// Interview default: use unordered_map for speed;
+// switch to map only if worst-case guarantee is required
+
 
 
 
