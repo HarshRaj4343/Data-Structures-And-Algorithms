@@ -149,9 +149,5 @@ int main()
     cout << "\n";
     cout << twosumbetter(v, n, target) << "\n";
     cout << twosumoptimal(v, n, target) << "\n";
-    vector<int> ans2 = twosumopt(v, n, target);
-    cout << "\n";
-    for (auto it3 : ans2)
-        cout << it3 << " ";
     return 0;
 }
