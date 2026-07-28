@@ -41,3 +41,8 @@ int main()
 
 // Time Complexity Analysis:-
 // 32 - 16 - 8 - 4 - 2 - 1 :- log N base 2
+
+// Another analyis for overflow:-
+
+// if high == INT_MAX, then computing mid by the formula above causes overflow, hence, use this particular formula instead:-
+// mid = low + (high - low)/2
