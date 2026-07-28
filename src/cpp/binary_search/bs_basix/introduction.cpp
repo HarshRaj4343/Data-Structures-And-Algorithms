@@ -38,3 +38,6 @@ int main()
     cout << binarysearchrecursive(v , 0, n-1, target) << endl;
     return 0;
 }
+
+// Time Complexity Analysis:-
+// 32 - 16 - 8 - 4 - 2 - 1 :- log N base 2
