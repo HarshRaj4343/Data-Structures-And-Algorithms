@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 // array is given sorted
@@ -19,9 +20,19 @@ vector <int> bruteforce(vector <int> &arr, int n, int x){
 }
 // TC = O(N)
 
-vector <int> binarysearch(vector <int> &arr, int n, int x){
-    vector <int> ans;
+vector<int> lbub(vector<int> &arr, int n, int x) {
+    auto it1 = lower_bound(arr.begin(), arr.end(), x);
+    int lb1 = it1 - arr.begin();
+    if (lb1 == n || arr[lb1] != x) {
+        return {-1, -1};
+    }
+    auto it2 = upper_bound(arr.begin(), arr.end(), x) - 1;
+    int ub1 = it2 - arr.begin();
+    return {lb1, ub1};
 }
+// TC = O(2 * log N base 2)
+
+vector <int> binarysearchplain(vect)
 
 int main()
 {
@@ -37,5 +48,7 @@ int main()
     vector <int> ans1 = bruteforce(v,n,x);
     for (auto it : ans1) cout << it << " ";
     cout << "\n";
+    vector <int> ans2 = binarysearch(v,n,x);
+    for (auto it2: ans2) cout << it2 << " ";
     return 0;
 }
