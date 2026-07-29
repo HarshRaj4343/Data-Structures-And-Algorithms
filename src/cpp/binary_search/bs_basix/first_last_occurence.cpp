@@ -32,7 +32,39 @@ vector<int> lbub(vector<int> &arr, int n, int x) {
 }
 // TC = O(2 * log N base 2)
 
-vector <int> binarysearchplain(vect)
+int binarysearchfirst(vector <int> &arr, int n, int x){
+    int first = -1;
+    int low = 0;
+    int high = n-1;
+    while (low <= high){
+        int mid = (low+high)/2;
+        if (arr[mid] == x) {
+            first = mid;
+            high = mid-1;
+        }
+        else if (arr[mid] < x) low = mid + 1;
+        else high = mid - 1;
+    }
+    return first;
+}
+
+vector <int> binarysearchlast(vector <int> &arr, int n, int x){
+    int first = binarysearchfirst(arr, n, x);
+    int last = -1;
+    int low = 0;
+    int high = n-1;
+    while (low<=high){
+        int mid = (low + high)/2;
+        if (arr[mid] == x) {
+            last = mid;
+            low = mid + 1;
+        }
+        else if (arr[mid] < x) low = mid + 1;
+        else high = mid - 1;
+    }
+    return {first,last};
+}
+
 
 int main()
 {
@@ -48,7 +80,10 @@ int main()
     vector <int> ans1 = bruteforce(v,n,x);
     for (auto it : ans1) cout << it << " ";
     cout << "\n";
-    vector <int> ans2 = binarysearch(v,n,x);
+    vector <int> ans2 = lbub(v,n,x);
     for (auto it2: ans2) cout << it2 << " ";
+    cout << "\n";
+    vector <int> ans3 = binarysearchlast(v,n,x);
+    for (auto it3: ans3) cout << it3 << " ";
     return 0;
 }
