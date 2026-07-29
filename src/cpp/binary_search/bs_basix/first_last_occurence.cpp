@@ -50,6 +50,7 @@ int binarysearchfirst(vector <int> &arr, int n, int x){
 
 vector <int> binarysearchlast(vector <int> &arr, int n, int x){
     int first = binarysearchfirst(arr, n, x);
+    if (first == -1) return {-1,-1}; // important line
     int last = -1;
     int low = 0;
     int high = n-1;
