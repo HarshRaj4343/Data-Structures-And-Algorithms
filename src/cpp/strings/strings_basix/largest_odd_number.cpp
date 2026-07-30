@@ -30,7 +30,7 @@ int main()
     return 0;
 }
 
-// std::stoi (returns int)
-// std::stol (returns long)
-// std::stoll (returns long long)
-// std::stoull (returns unsigned long long)
+// stoi (returns int)
+// stol (returns long)
+// stoll (returns long long)
+// stoull (returns unsigned long long)
