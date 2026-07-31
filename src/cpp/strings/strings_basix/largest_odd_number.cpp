@@ -29,7 +29,7 @@ int main()
     cout << oddnum(s) << " ";
     return 0;
 }
-
+// to convert a string to an integer, we can use the following functions:
 // stoi (returns int)
 // stol (returns long)
 // stoll (returns long long)
