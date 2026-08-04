@@ -43,12 +43,30 @@ vector <int> better(vector <int> &arr, int n){
  *
  * Loop runs while mid <= high.
  *
- * Time Complexity: O(n) — single pass
+ * Time Complexity: O(n) — single pass - each condition - 1 element sorted (so total become O(N) iteration)
  * Space Complexity: O(1) — in-place
  */
 
 vector <int> dutchnationalflagalgo(vector <int> &arr, int n){
-
+    int mid = 0;
+    int high = n-1;
+    int low = 0;
+    // arr[mid] can either be 0,1 or 2
+    while (mid <= high){
+        if (arr[mid] == 0){
+            swap(arr[low],arr[mid]);
+            mid++;
+            low++;
+        }
+        else if (arr[mid] == 1){
+            mid++;
+        }
+        else {
+            swap(arr[mid],arr[high]);
+            high--;
+        }
+    }
+    return arr;
 }
 
 int main()
@@ -63,6 +81,9 @@ int main()
         v.emplace_back(x);
     }
     vector <int> ans1 = better(v,n);
-    for (auto it : ans1) cout << it << " ";
+    for (auto it1 : ans1) cout << it1 << " ";
+    cout << "\n";
+    vector <int> ans2 = dutchnationalflagalgo(v,n);
+    for (auto it2 : ans2) cout << it2 << " ";
     return 0;
 }
