@@ -17,7 +17,16 @@ vector <int> better(vector <int> &arr, int n){
 }
 
 vector <int> optimal(vector <int> &arr, int n){
-    
+    int breakpointidx;
+    // fetch the breakpoint index
+    for (int i = n-1; i > 0; i--) {
+        if ((i != n-1) && (arr[i] < arr[i+1])){
+            breakpointidx = i;
+        }
+    }
+    for (int i = i+1; i < n; i++) {
+        
+    }
 }
 
 
