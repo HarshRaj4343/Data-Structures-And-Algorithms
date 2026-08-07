@@ -90,7 +90,7 @@
 // }
 
 // PALINDROME CHECK
-
+// negative numbers cannot be palindromes
 // #include <iostream>
 // using namespace std;
 
