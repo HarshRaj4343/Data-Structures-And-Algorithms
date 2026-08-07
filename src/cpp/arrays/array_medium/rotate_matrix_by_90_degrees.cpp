@@ -36,6 +36,7 @@ void optimal(vector<vector<int>> &matrix)
         reverse(matrix[i].begin(), matrix[i].end());
     }
 }
+// tc = o(n/2*n/2) + o(n*n/2)
 int main()
 {
     int n, m;
