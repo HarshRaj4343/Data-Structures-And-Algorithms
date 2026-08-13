@@ -64,10 +64,13 @@ int findLength(Node *head)
 
 Node *deletehead(Node *head)
 {
-    if (head == nullptr)
-        return head;
+    if (head == nullptr || head->next == nullptr)
+        return nullptr;
+
     Node *temp = head;
     head = head->next;
+    head->prev = nullptr;
+    temp->next = nullptr;
     free(temp);
     return head;
 }
@@ -75,14 +78,76 @@ Node *deletehead(Node *head)
 Node *deletetail(Node *head)
 {
     if (head == nullptr || head->next == nullptr)
-        return head;
+        return nullptr;
     Node *temp = head;
-    while (temp->next->next != nullptr)
+    while (temp->next != nullptr)
     {
         temp = temp->next;
     }
+
+    temp->prev->next = nullptr;
+    temp->prev = nullptr;
     free(temp);
     return head;
+}
+
+// k is between 1 to n
+
+Node *deletek(Node *head, int k)
+{
+    if (head == nullptr)
+        return nullptr;
+    Node *temp = head;
+    int cnt = 0;
+    while (temp != nullptr)
+    {
+        cnt++;
+        if (cnt == k)
+            break;
+        temp = temp->next;
+    }
+    Node *prevNode = temp->prev;
+    Node *nextNode = temp->next;
+    if (prevNode == nullptr && nextNode == nullptr)
+    {
+        free(temp);
+        return nullptr;
+    }
+    else if (prevNode == nullptr && nextNode != nullptr)
+    {
+        head = deletehead(head);
+        return head;
+    }
+    else if (prevNode != nullptr && nextNode == nullptr)
+    {
+        head = deletetail(head);
+        return head;
+    }
+    prevNode->next = nextNode;
+    nextNode->prev = prevNode;
+
+    temp->next = nullptr;
+    temp->prev = nullptr;
+    free(temp);
+    return head;
+}
+
+// given node is never the head of the dll
+
+void deleteNode(Node *temp)
+{
+    Node *prev = temp->prev;
+    Node *front = temp->next;
+    if (front == nullptr)
+    {
+        prev->next = nullptr;
+        free(temp);
+        return;
+    }
+    prev->next = front;
+    front->prev = prev;
+    temp->next = temp->prev = nullptr;
+    free(temp);
 }
 
 int main()
@@ -99,8 +164,10 @@ int main()
     }
 
     Node *temp = convertArrayToLinkedList(v);
-    temp = deletehead(temp);
-    temp = deletetail(temp);
+    // temp = deletehead(temp);
+    // temp = deletetail(temp);
+    // temp = deletek(temp, 3);
+    deleteNode(temp); // if i say head, then this head will move and will have to make the next element as the node.
     print(temp);
     return 0;
 }
