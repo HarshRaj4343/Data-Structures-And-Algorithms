@@ -13,12 +13,13 @@ build/
 *.dSYM/
 cmake-build-*/
 
-# Compiled binaries (extensionless executables next to .cpp sources)
-src/cpp/patterns/pattern_solutions/*
-!src/cpp/patterns/pattern_solutions/*.cpp
-src/cpp/patterns/pattern_full_solns/*
-!src/cpp/patterns/pattern_full_solns/*.cpp
-src/cpp/patterns/patterns_revision_2
+# Compiled binaries (extensionless executables next to .cpp sources).
+# Ignore every extensionless file under src/, but keep directories and any
+# file that has an extension. Note: an extensionless file you DO want tracked
+# (e.g. a Makefile under src/) needs `git add -f`.
+src/**/*
+!src/**/
+!src/**/*.*
 
 # Python
 __pycache__/
