@@ -62,6 +62,55 @@ int findLength(Node *head)
     return length;
 }
 
+Node *InsertAtHead(Node *head, int el)
+{
+    Node *latestNode = new Node(el, head, nullptr);
+    head->prev = latestNode;
+    return latestNode;
+}
+
+Node *InsertAtTail(Node *head, int el)
+{
+    Node *tail = head;
+    while (tail->next != nullptr)
+    {
+        tail = tail->next;
+    }
+    Node *pichla = tail->prev;
+    Node *naya = new Node(el, tail, pichla);
+    tail->prev = naya;
+    pichla->next = naya;
+    return head;
+}
+
+Node *InsertAtK(Node *head, int el, int k)
+{
+    if (k == 1)
+        return InsertAtHead(head, el);
+    int cnt = 0;
+    Node *temp = head;
+    while (temp != nullptr)
+    {
+        cnt++;
+        if (cnt == k)
+            break;
+        temp = temp->next;
+    }
+    Node *pichla = temp->prev;
+    Node *naya = new Node(el, temp, pichla);
+    temp->prev = naya;
+    pichla->next = naya;
+    return head;
+}
+
+// given node is not equal to head.
+void InsertNode(Node *nod, int val){
+    Node *pichla = nod->prev;
+    Node *newNode = new Node(val, nod, pichla);
+    pichla->next = newNode;
+    nod->prev = newNode;
+}
+
 int main()
 {
     int n;
@@ -76,6 +125,10 @@ int main()
     }
 
     Node *temp = convertArrayToLinkedList(v);
+    // temp = InsertAtHead(temp, 5);
+    // temp = InsertAtTail(temp, 5);
+    // temp = InsertAtK(temp, 5, 4);
+    InsertNode(temp->next->next,100);
     print(temp);
     return 0;
 }
