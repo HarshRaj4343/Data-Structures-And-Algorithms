@@ -83,18 +83,27 @@ Node *OddEvenLinkedListBrute(Node *head)
 // TC = O(2N)
 // SC = O(N)
 
-Node *OddEvenLinkedListOptimal(Node *head){
-    if (head == nullptr || head->next == nullptr) return head;
-    Node *OddTemp = head;
-    Node *EvenNode = head->next;
-    Node *EvenTemp = head->next;
-    while (OddTemp != nullptr && EvenTemp != nullptr && OddTemp->next != nullptr && EvenTemp->next != nullptr){
+Node* OddEvenLinkedListOptimal(Node* head) {
+    if (head == nullptr || head->next == nullptr)
+        return head;
+    Node* OddTemp = head;
+    Node* EvenTemp = head->next;
+    Node* EvenNode = head->next;
+
+    while (EvenTemp != nullptr && EvenTemp->next != nullptr) {
         OddTemp->next = OddTemp->next->next;
+        OddTemp = OddTemp->next;
         EvenTemp->next = EvenTemp->next->next;
+        EvenTemp = EvenTemp->next;
     }
+
     OddTemp->next = EvenNode;
+
     return head;
 }
+
+// TC = O(N/2) * 2 (due to the computations of oddtemp.next and eventemp.next) = O(N)
+// SC = O(1)
 
 int main()
 {
