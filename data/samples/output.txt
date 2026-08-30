@@ -1,9 +1,9 @@
-Top: 30
+Front: 10
+Size: 4
+After one pop:
+Front: 20
 Size: 3
-Top after pop: 20
-Size after pop: 2
-Top after pop: 10
-Size: 1
-Stack is Empty
-Top: Stack is Empty
--1
+After popping everything:
+Size: 0
+Nothing to pop out!
+Front: Nothing to show!-1
