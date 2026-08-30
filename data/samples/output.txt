@@ -1,2 +1,9 @@
-4
-1
+Top: 30
+Size: 3
+Top after pop: 20
+Size after pop: 2
+Top after pop: 10
+Size: 1
+Stack is Empty
+Top: Stack is Empty
+-1
