@@ -1,9 +1,1 @@
-Front: 10
-Size: 4
-After one pop:
-Front: 20
-Size: 3
-After popping everything:
-Size: 0
-Nothing to pop out!
-Front: Nothing to show!-1
+2 5 1 3 
